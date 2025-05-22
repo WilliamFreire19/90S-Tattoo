@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply bg-black text-white;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bebas Neue', sans-serif;
+    @apply font-bold;
+  }
+}
+
+@layer components {
+  .container {
+    @apply px-4 mx-auto max-w-7xl;
+  }
+  
+  .btn {
+    @apply px-6 py-3 border border-white uppercase tracking-wider text-sm font-medium hover:bg-white hover:text-black transition-colors duration-300;
+  }
+  
+  .section-title {
+    @apply text-4xl md:text-5xl mb-12 font-bold tracking-wide;
+    font-family: 'Bebas Neue', sans-serif;
+  }
+  
+  .subtitle {
+    @apply uppercase text-xl font-medium mb-4 tracking-wider;
+  }
+  
+  .nav-link {
+    @apply hover:text-gray-300 transition-colors;
+  }
+  
+  .input-field {
+    @apply w-full bg-black border border-gray-800 p-3 text-white focus:border-white transition-colors;
+  }
+  
+  .section-number {
+    @apply text-xl opacity-50 font-medium;
+  }
+  
+  .gallery-filter-btn {
+    @apply px-4 py-2 mx-1 uppercase hover:text-gray-300 transition-colors;
+  }
+  
+  .gallery-filter-btn.active {
+    @apply border-b border-white;
+  }
+}
+
+.overlay {
+  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.1) 100%);
+}
+
+.header-shadow {
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
